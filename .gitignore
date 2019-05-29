@@ -106,6 +106,9 @@ venv.bak/
 # add
 /.idea/
 .DS_Store
-torch/mnist_data/MNIST/
-torch/fashion_mnist_data/FashionMNIST/
 *.pt
+
+# dataset
+torch/mnist_data/
+torch/fashion_mnist_data/
+torch/hymenoptera_data/
