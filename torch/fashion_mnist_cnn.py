@@ -67,14 +67,14 @@ device = torch.device("cuda" if use_cuda else "cpu")
 batch_size = test_batch_size = 32
 kwargs = {'num_workers': 1, 'pin_memory': True} if use_cuda else {}
 train_loader = torch.utils.data.DataLoader(
-    datasets.FashionMNIST('./fashion_mnist_data', train=True, download=True,
+    datasets.FashionMNIST('./data/fashion_mnist_data', train=True, download=True,
                           transform=transforms.Compose([
                               transforms.ToTensor(),
                               transforms.Normalize((0.1307,), (0.3081,))
                           ])),
     batch_size=batch_size, shuffle=True, **kwargs)
 test_loader = torch.utils.data.DataLoader(
-    datasets.FashionMNIST('./fashion_mnist_data', train=False, transform=transforms.Compose([
+    datasets.FashionMNIST('./data/fashion_mnist_data', train=False, transform=transforms.Compose([
         transforms.ToTensor(),
         transforms.Normalize((0.1307,), (0.3081,))
     ])),
@@ -92,4 +92,4 @@ for epoch in range(1, epochs + 1):
 
 save_model = True
 if (save_model):
-    torch.save(model.state_dict(), "fashion_mnist_cnn.pt")
+    torch.save(model.state_dict(), "./pt/fashion_mnist_cnn.pt")

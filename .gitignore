@@ -109,6 +109,6 @@ venv.bak/
 *.pt
 
 # dataset
-torch/mnist_data/
-torch/fashion_mnist_data/
-torch/hymenoptera_data/
+torch/data/
+tensorflow/data/
+tensorflow/graphs/
