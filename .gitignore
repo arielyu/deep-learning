@@ -109,6 +109,6 @@ venv.bak/
 *.pt
 
 # dataset
-torch/data/
+torch_files/data/
 tensorflow_files/data/
 tensorflow_files/graphs/
